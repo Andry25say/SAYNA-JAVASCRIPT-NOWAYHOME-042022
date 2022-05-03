@@ -30,31 +30,35 @@ function(){
         "backgroundColor" : "transparent",
         "color" :"#b11313",
         "boxShadow":"none"
-
     })
 }
 )
+   // ....................///////.....................
+   $(".menu a").mouseover(function(){
+    $(this).css({
+        "borderBottom":"1px solid #ffffff",
 
-
-
-    $(".media img").mouseover(function(){
-        $(this).css("backgroundColor","#ffffff");
-    })
-    $(".media img").mouseout(function(){
-        $(this).css("backgroundColor","#b11313");
-    })
-    // ....................///////.....................
-    $(".menu a").mouseover(function(){
-        $(this).css({
-            "borderBottom":"1px solid #ffffff",
-
-        });
-        
-    })
-    $(".menu a").mouseout(function(){
-        $(this).css("borderBottom","none");
-    })
-      // ....................///////.....................
+    });
+    
 })
+$(".menu a").mouseout(function(){
+    $(this).css("borderBottom","none");
+})
+  // ....................///////.....................
+/*effet survol sur les medias*/
+$(".mediasociaux").hover(function(){
+$(this).css("color","white")
+},
+function(){
+$(this).css("color","black")
+}
+)
+
+/* l'effet fade in du titre */
+  $("h1 .titre").first().animate({
+      left:200
+  })
+
+});
 
   
