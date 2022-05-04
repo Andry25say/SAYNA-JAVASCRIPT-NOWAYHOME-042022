@@ -44,7 +44,7 @@ function(){
 $(".menu a").mouseout(function(){
     $(this).css("borderBottom","none");
 })
-  // ....................///////.....................
+
 /*effet survol sur les medias*/
 $(".mediasociaux").hover(function(){
 $(this).css("color","white")
@@ -54,10 +54,39 @@ $(this).css("color","black")
 }
 )
 
-/* l'effet fade in du titre */
-  $("h1 .titre").first().animate({
-      left:200
-  })
+ /*l'effet fade in du titre */
+$("h1").hide().animate({
+     marginLeft:"-15px"
+ },"slow","linear").fadeToggle(10000);
+
+ $(".description").hide().animate({
+     marginTop:"-0.3in"
+ },"slow").show(2500);
+/*l'effet */
+$(window).scroll(function(){
+        $(".flou").css({
+            opacity:"40%",
+            float:"right",
+            top:"0",
+            position:"fixed",
+            marginLeft:"600px"
+        })
+})
+
+
+/*effet hover card unique*/
+ $(".card-unique").mouseover(function(){
+    $(".card-text").css({
+     display:"none"
+     })
+ },
+ $(".card-unique").mouseout(function(){ 
+     $(".card-text").css({
+     display:"inline-block"
+ })
+   
+ })
+ )
 
 });
 

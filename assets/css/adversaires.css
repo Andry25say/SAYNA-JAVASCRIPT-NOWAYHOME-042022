@@ -78,13 +78,14 @@ ul{
 /* La partie Hero Design */
 
 #hero{
-    background-image: url("../img/img7.png");
-    height: 550px;
+    background-image: url("../img/img1.png");
+    background-color: var(--primary-ad-color);
+    height: 870px;
     background-repeat: no-repeat;
     background-position: center right;
-    background-size: cover;
+    background-size:auto;
 }
-
+    
 #hero div{
     color: var(--white-ad-color);
 }
@@ -98,6 +99,7 @@ ul{
 #hero .description{
     font-weight: bold;
     font-size: 1.4em;
+    /* display: none; */
 }
 
 #hero .box{
@@ -235,7 +237,14 @@ footer .media img{
 footer .copyright{
     padding: 10px;
 }
-
+.mediasociaux{
+    border-radius:50%;
+    background-color: #b11313;
+    display: inline-block;
+    color: #000000;
+    width: 70px;
+    height: 70px;
+}
 /* Mobile */
 
 @media screen and (max-width: 768px) {

@@ -121,11 +121,3 @@ input[type=submit]{
     background-color: white;
     color: #000000;
 }
-.mediasociaux{
-    border-radius:50%;
-    background-color: #b11313;
-    display: inline-block;
-    color: #000000;
-    width: 70px;
-    height: 70px;
-}
