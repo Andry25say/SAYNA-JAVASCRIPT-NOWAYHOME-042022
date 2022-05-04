@@ -6,7 +6,7 @@
 }
 
 #hero{
-    background-image: url("../img/img1.png");
+    background-image: none;
     background-color: var(--primary-ad-color);
     height: 870px;
     background-repeat: no-repeat;
