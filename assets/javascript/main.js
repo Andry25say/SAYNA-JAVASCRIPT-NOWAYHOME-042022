@@ -1,58 +1,57 @@
 
 /*effet hover des boutons1*/
-$(document).ready(function(){
-    $(".button1").hover(function(){
-        $(this).css({
-            "backgroundColor" : "#b11313",
-            "color" :"#ffffff",
-            "boxShadow":"0 0 25px #ffffff"
-        })
-    },
-    function(){
-        $(this).css({
-            "backgroundColor" : "#ffffff",
-            "color" :"#b11313",
-            "boxShadow":"none"
+ $(document).ready(function(){
+     $(".button1").hover(function(){
+         $(this).css({
+             "backgroundColor" : "#b11313",
+             "color" :"#ffffff",
+             "boxShadow":"0 0 25px #ffffff"
+         })
+     },
+     function(){
+         $(this).css({
+             "backgroundColor" : "#ffffff",
+             "color" :"#b11313",
+             "boxShadow":"none"
 
-        })
-    }
-    )
+         })
+     }
+     )
 /*effet hover des boutons2*/
-$(".button2").hover(function(){
-    $(this).css({
-        "backgroundColor" : "#b11313",
-        "color" :"#ffffff",
-        "boxShadow":"0 0 25px #ffffff"
-    })
-},
-function(){
-    $(this).css({
-        "backgroundColor" : "transparent",
-        "color" :"#b11313",
-        "boxShadow":"none"
-    })
-}
-)
-   // ....................///////.....................
-   $(".menu a").mouseover(function(){
-    $(this).css({
-        "borderBottom":"1px solid #ffffff",
-
-    });
+ $(".button2").hover(function(){
+     $(this).css({
+         "backgroundColor" : "#b11313",
+         "color" :"#ffffff",
+         "boxShadow":"0 0 25px #ffffff"
+     })
+ },
+ function(){
+     $(this).css({
+         "backgroundColor" : "transparent",
+         "color" :"#b11313",
+         "boxShadow":"none"
+     })
+ }
+ )
+    // ....................///////.....................
+    $(".menu a").mouseover(function(){
+     $(this).css({
+         "borderBottom":"1px solid #ffffff",
+     });
     
-})
-$(".menu a").mouseout(function(){
-    $(this).css("borderBottom","none");
-})
+ })
+ $(".menu a").mouseout(function(){
+     $(this).css("borderBottom","none");
+ })
 
-/*effet survol sur les medias*/
-$(".mediasociaux").hover(function(){
-$(this).css("color","white")
-},
-function(){
-$(this).css("color","black")
-}
-)
+ /*effet survol sur les medias*/
+ $(".mediasociaux").hover(function(){
+ $(this).css("color","white")
+ },
+ function(){
+ $(this).css("color","black")
+ }
+ )
 
  /*l'effet fade in du titre */
 $("h1").hide().animate({
@@ -63,25 +62,25 @@ $("h1").hide().animate({
      marginTop:"-0.3in"
  },"slow").show(2500);
 /*l'effet */
-$(window).scroll(function(){
+// $(window).scroll(function(){
        
-        $(".flou").css({
-            opacity:"70%",
-            float:"right",
-            top:"0",
-            position:"fixed",
-            marginLeft:"600px",
-        })
-    $(".flou2").css({
-        opacity:"50%",
-        float:"left",
-        top:"0",
-        position:"fixed",
-        marginLeft:"10px",
-        zIndex:"3"
-    })
+        // $(".flou").css({
+        //     opacity:"70%",
+        //     float:"right",
+        //     top:"0",
+        //     position:"fixed",
+        //     marginLeft:"600px",
+    //     // })
+    // $(".flou2").css({
+    //     opacity:"50%",
+    //     float:"left",
+    //     top:"0",
+    //     position:"fixed",
+    //     marginLeft:"10px",
+    //     zIndex:"3"
+    // })
               
-})
+
 /*marvel */
 $(".marvel-text").css({
     position:"relative",
@@ -92,8 +91,6 @@ $(".marvel-text").css({
 }).fadeIn().animate({
     left:"200px"
 },4000)
-let o = window.scrollY();
-console.log(o);
 
 /*effet hover card unique*/
  $(".card-unique").mouseover(function(){
@@ -111,4 +108,44 @@ console.log(o);
 
 });
 
-  
+
+//changer les images//
+let img = document.querySelector("#myImage")
+img.addEventListener("mouseover",function(){
+if(img.src.match("img3")){
+    img.src = "./assets/img/img2.png"
+}
+else{
+   img.src ="./assets/img/img3.png"
+}
+}
+)
+img.addEventListener("mouseout",function(){
+    img.src = "./assets/img/img2.png";
+})
+/*scroller*/
+$(document).ready(function(){
+    $(window).scroll(function(){
+        console.log($(window).scrollTop())
+        if($(window).scrollTop()< 1450 ){
+            $(".flou").show().css({
+                opacity:"70%",
+                float:"right",
+                top:"0",
+                position:"fixed",
+                marginLeft:"600px",
+            });
+            $(".flou2").hide();
+        }
+        if($(window).scrollTop() > 1450 ){
+            $(".flou").hide();
+            $(".flou2").show().css({
+                opacity:"50%",
+                float:"left",
+                top:"0",
+                position:"fixed",
+                marginLeft:"10px",
+            })
+        }
+    })
+})
